@@ -88,12 +88,6 @@
 </p>
 
 <p align="center">
-  <img <img src="https://github.com/vanyaokblog/CartridgeINK/blob/main/Screenshots/AddCartridgeWindow.png">
-</br>Окно заказа
-</br> </br> </br>
-</p>
-
-<p align="center">
   <img <img src="https://github.com/vanyaokblog/MeowStore/blob/main/Screenshots/OrderWin.png">
 </br>Оформление заказа
 </br> </br> </br>
