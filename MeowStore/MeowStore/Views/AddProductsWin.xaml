@@ -1,0 +1,32 @@
+﻿<Window x:Class="MeowStore.Views.AddProductsWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MeowStore.Views"
+        mc:Ignorable="d"
+        Title="Добавить товар" Height="500" Width="400" ResizeMode="NoResize" Background="#FF6DCEB6">
+        <Grid>
+            <StackPanel>
+                <TextBlock Text="Наименование товара:" TextAlignment="Center" Margin="0,7,0,0" FontFamily="../Fonts/#Montserrat" FontSize="22"/>
+                <TextBox x:Name="NameTextBox" Margin="0,5,0,0" TextWrapping="Wrap" FontFamily="../Fonts/#Montserrat" Height="30" Width="300" FontSize="21"/>
+
+                <TextBlock Text="Категория товара:" TextAlignment="Center" Margin="0,5,0,0" FontFamily="../Fonts/#Montserrat" FontSize="22"/>
+                <ComboBox x:Name="CategoryComboBox" DisplayMemberPath="NameCategory" FontFamily="../Fonts/#Montserrat" Height="30" Width="300" FontSize="20"/>
+
+                <TextBlock Text="Описание:" TextAlignment="Center" Margin="0,5,0,0" FontFamily="../Fonts/#Montserrat" FontSize="22"/>
+                <TextBox x:Name="DescriptionTextBox" Margin="0,5,0,0" TextWrapping="Wrap" FontFamily="../Fonts/#Montserrat" Height="30" Width="300" FontSize="21"/>
+
+                <TextBlock Text="Цена:" TextAlignment="Center" Margin="0,5,0,0" FontFamily="../Fonts/#Montserrat" FontSize="22"/>
+                <TextBox x:Name="PriceTextBox" Margin="0,5,0,0" TextWrapping="Wrap" FontFamily="../Fonts/#Montserrat" Height="30" Width="300" FontSize="21"/>
+
+                <TextBlock Text="Количество на складе:" TextAlignment="Center" Margin="0,5,0,0" FontFamily="../Fonts/#Montserrat" FontSize="22"/>
+                <TextBox x:Name="CountTextBox" Margin="0,5,0,0" TextWrapping="Wrap" FontFamily="../Fonts/#Montserrat" Height="30" Width="300" FontSize="21"/>
+
+                <TextBlock Text="Путь к картинке:" TextAlignment="Center" Margin="0,5,0,0" FontFamily="../Fonts/#Montserrat" FontSize="22"/>
+                <TextBox x:Name="PathTextBox" Margin="0,5,0,0" TextWrapping="Wrap" FontFamily="../Fonts/#Montserrat" Height="30" Width="300" FontSize="21"/>
+
+                <Button x:Name="AddProductButton" Content="Добавить" Margin="0,18,0,0" FontFamily="../Fonts/#Montserrat SemiBold" Height="33" Width="300" FontSize="22" Click="AddProductButton_Click"/>
+            </StackPanel>
+        </Grid>
+</Window>

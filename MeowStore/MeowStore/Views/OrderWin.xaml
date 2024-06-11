@@ -1,0 +1,46 @@
+﻿<Window x:Class="MeowStore.Views.OrderWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MeowStore.ViewModels"
+        mc:Ignorable="d"
+        Title="Окно Заказа" Height="1080" Width="1920" WindowState="Maximized" ResizeMode="NoResize" Background="#FF6DCEB6">
+    <Window.DataContext>
+        <local:ProductViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock FontFamily="../Fonts/#Montserrat" TextAlignment="Center" FontSize="22" Margin="0,20,0,0">система управления интернет-магазина</TextBlock>
+        <TextBlock FontFamily="../Fonts/#Montserrat SemiBold" TextAlignment="Center" FontSize="65" Margin="0,33,0,0">MEOW STORE</TextBlock>
+        <DataGrid CanUserAddRows="False" x:Name="BasketDataGrid" ItemsSource="{Binding Basket}" AutoGenerateColumns="False" Margin="0,136,0,270" Background="#FF6DCEB6">
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Удалить из корзины" Click="RemoveProduct_Click"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название товара" Binding="{Binding NameProduct}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Количество" Binding="{Binding Count}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Сумма" Binding="{Binding Sum}" IsReadOnly="True" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <TextBlock Text="Выберите пункт выдачи:" FontFamily="../Fonts/#Montserrat SemiBold" FontSize="28" HorizontalAlignment="Left" Margin="32,864,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="PointsComboBox" ItemsSource="{Binding Points}" DisplayMemberPath="AddressPoint" SelectedValuePath="idPoint" Width="650" Height="40" FontFamily="../Fonts/#Montserrat Medium" FontSize="22" Margin="32,907,1238,117"/>
+        <Viewbox Margin="1651,20,38,952">
+            <StackPanel>
+                <Button x:Name="CompleteOrderButton" FontFamily="../Fonts/#Montserrat Medium" FontSize="21" Width="270" Height="50" Click="CompleteOrderButton_Click">Завершить заказ</Button>
+                <Button x:Name="BackButton" FontFamily="../Fonts/#Montserrat Medium" FontSize="21" Width="270" Height="50" Click="BackButton_Click">Вернуться назад</Button>
+            </StackPanel>
+        </Viewbox>
+        <TextBlock x:Name="BasketSumTextBlock" FontFamily="../Fonts/#Montserrat SemiBold" FontSize="28" HorizontalAlignment="Left" Margin="784,910,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

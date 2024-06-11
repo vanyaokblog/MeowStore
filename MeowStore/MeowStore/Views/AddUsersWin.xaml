@@ -1,0 +1,23 @@
+﻿<Window x:Class="MeowStore.Views.AddUsersWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MeowStore.Views"
+        mc:Ignorable="d"
+        Title="Добавить пользователя" Height="400" Width="400" ResizeMode="NoResize" Background="#FF6DCEB6">
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="Имя пользователя:" TextAlignment="Center" Margin="0,40,0,0" FontFamily="../Fonts/#Montserrat" FontSize="22"/>
+            <TextBox x:Name="UsernameTextBox" Margin="0,5,0,0" TextWrapping="Wrap" FontFamily="../Fonts/#Montserrat" Height="30" Width="300" FontSize="21"/>
+
+            <TextBlock Text="Пароль:" TextAlignment="Center" Margin="0,10,0,0" FontFamily="../Fonts/#Montserrat" FontSize="22"/>
+            <PasswordBox x:Name="PasswordBox" Margin="0,5,0,0" FontFamily="../Fonts/#Montserrat" Height="30" Width="300" FontSize="21"/>
+
+            <TextBlock Text="Роль:" TextAlignment="Center" Margin="0,10,0,0" FontFamily="../Fonts/#Montserrat" FontSize="22"/>
+            <ComboBox DisplayMemberPath="NameRole" x:Name="RoleComboBox" Margin="0,5,0,0" FontFamily="../Fonts/#Montserrat" Height="30" Width="300" FontSize="20"/>
+
+            <Button x:Name="AddUserButton" Content="Добавить" Margin="0,30,0,0" FontFamily="../Fonts/#Montserrat SemiBold" Height="33" Width="300" FontSize="22" Click="AddUserButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
