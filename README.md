@@ -105,3 +105,8 @@
 </br> </br> </br>
 </p>
 
+<p align="center">
+  <img <img src="https://github.com/vanyaokblog/MeowStore/blob/main/Screenshots/AddUserWin.png">
+</br>Добавление нового пользователя
+</br> </br> </br>
+</p>
