@@ -95,7 +95,7 @@
 
 <p align="center">
   <img <img src="https://github.com/vanyaokblog/MeowStore/blob/main/Screenshots/OrderWin.png">
-</br>Добавление нового пользователя
+</br>Оформление заказа
 </br> </br> </br>
 </p>
 
