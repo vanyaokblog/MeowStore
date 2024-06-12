@@ -55,6 +55,9 @@
 - **Таблица «Basket»** _(idBasket, idCustomer, idPoint, idStatus)_ содержит информацию о корзинах покупок.
 - **Таблица «ProdBasket»** _(idProduct, Count, Sum, idBasket)_ содержит информацию о товарах в корзине.
 
+# Видеодемонстрация:
+Видеодемонстрацию использования приложения доступна [по этой ссылке](https://drive.google.com/drive/folders/1nlCq9ILRut2anlsPN6z-F19V1PpdU_OY).
+
 # Скриншоты приложения:
 
 <p align="center">
